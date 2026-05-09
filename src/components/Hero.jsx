@@ -1,4 +1,5 @@
 import { buildWhatsAppLink } from '../data/products.js'
+import { imagePath } from '../utils/assets.js'
 
 function Hero() {
   // Mensaje general para quien llega y todavia no eligio un producto puntual.
@@ -40,13 +41,13 @@ function Hero() {
       {/* Mosaico de imagenes para que la marca se sienta visual desde el inicio. */}
       <div className="hero-right">
         <div className="hero-img hero-img-big">
-          <img src="/images/set-azul-cielo.jpg" alt="Set Azul Cielo" />
+          <img src={imagePath('set-azul-cielo.jpg')} alt="Set Azul Cielo" />
         </div>
         <div className="hero-img">
-          <img src="/images/set-rosado.jpg" alt="Set Rosado" />
+          <img src={imagePath('set-rosado.jpg')} alt="Set Rosado" />
         </div>
         <div className="hero-img">
-          <img src="/images/set-negro.jpg" alt="Set Negro" />
+          <img src={imagePath('set-negro.jpg')} alt="Set Negro" />
         </div>
       </div>
     </section>

@@ -1,11 +1,13 @@
+import { imagePath } from '../utils/assets.js'
+
 const INSTAGRAM_URL = 'https://instagram.com/beegold'
 
 // Fotos que simulan una mini galeria de Instagram.
 const instaPhotos = [
-  { src: '/images/set-rosado.jpg', alt: 'Instagram 1' },
-  { src: '/images/set-azul-cielo.jpg', alt: 'Instagram 2' },
-  { src: '/images/set-azul-marino.jpg', alt: 'Instagram 3' },
-  { src: '/images/set-negro.jpg', alt: 'Instagram 4' },
+  { src: imagePath('set-rosado.jpg'), alt: 'Instagram 1' },
+  { src: imagePath('set-azul-cielo.jpg'), alt: 'Instagram 2' },
+  { src: imagePath('set-azul-marino.jpg'), alt: 'Instagram 3' },
+  { src: imagePath('set-negro.jpg'), alt: 'Instagram 4' },
 ]
 
 function Instagram() {

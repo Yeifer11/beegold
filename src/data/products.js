@@ -1,5 +1,6 @@
 // Datos del catalogo. La idea es que los productos se puedan cambiar desde aqui
 // sin tocar los componentes que pintan la interfaz.
+import { imagePath } from '../utils/assets.js'
 
 // Numero de WhatsApp del negocio, en formato internacional y sin el signo +.
 export const WHATSAPP_NUMBER = '573118525167'
@@ -19,7 +20,7 @@ export const products = [
     description:
       'Top sin mangas + leggins de cintura alta. Tela acanalada con compresión suave.',
     price: 130000,
-    image: '/images/set-rosado.jpg',
+    image: imagePath('set-rosado.jpg'),
     badge: 'Disponible',
     colorDots: [{ hex: '#e879a0', label: 'Rosado' }],
     waMessage: 'Hola! Quiero el Set Acanalado Rosado 💗 $130.000',
@@ -30,7 +31,7 @@ export const products = [
     description:
       'Top manga corta con espalda abierta + leggins acanalados de cintura alta.',
     price: 130000,
-    image: '/images/set-azul-cielo.jpg',
+    image: imagePath('set-azul-cielo.jpg'),
     badge: 'Disponible',
     colorDots: [{ hex: '#8ab8d8', label: 'Azul cielo' }],
     waMessage: 'Hola! Quiero el Set Azul Cielo 💙 $130.000',
@@ -41,7 +42,7 @@ export const products = [
     description:
       'Top manga corta + leggins de cintura alta en azul marino profundo.',
     price: 130000,
-    image: '/images/set-azul-marino.jpg',
+    image: imagePath('set-azul-marino.jpg'),
     badge: 'Disponible',
     colorDots: [{ hex: '#1e3a6e', label: 'Azul marino' }],
     waMessage: 'Hola! Quiero el Set Azul Marino 💙 $130.000',
@@ -52,7 +53,7 @@ export const products = [
     description:
       'Top manga corta + leggins acanalados en tono café terroso y cálido.',
     price: 130000,
-    image: '/images/set-cafe.jpg',
+    image: imagePath('set-cafe.jpg'),
     badge: 'Disponible',
     colorDots: [{ hex: '#7a4a30', label: 'Café' }],
     waMessage: 'Hola! Quiero el Set Café 🤎 $130.000',
@@ -63,7 +64,7 @@ export const products = [
     description:
       'Top manga larga con puños + leggins de cintura alta. Ideal para días fríos.',
     price: 130000,
-    image: '/images/set-negro.jpg',
+    image: imagePath('set-negro.jpg'),
     badge: 'Disponible',
     colorDots: [{ hex: '#1a1a1a', label: 'Negro' }],
     waMessage: 'Hola! Quiero el Set Negro 🖤 $130.000',
@@ -74,7 +75,7 @@ export const products = [
     description:
       'Los tops con manga corta tienen un diseño de espalda descubierta exclusivo.',
     price: 130000,
-    image: '/images/set-azul-trasero.jpg',
+    image: imagePath('set-azul-trasero.jpg'),
     badge: null,
     colorDots: [
       { hex: '#8ab8d8', label: 'Azul cielo' },

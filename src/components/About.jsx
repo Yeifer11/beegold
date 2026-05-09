@@ -1,3 +1,5 @@
+import { imagePath } from '../utils/assets.js'
+
 function About() {
   // Estos numeros se pintan abajo del texto. Estan en arreglo para poder editarlos rapido.
   const stats = [
@@ -9,7 +11,7 @@ function About() {
   return (
     <section id="sobre">
       <div className="sobre-img">
-        <img src="/images/set-azul-marino.jpg" alt="BeeGold modelo" />
+        <img src={imagePath('set-azul-marino.jpg')} alt="BeeGold modelo" />
       </div>
 
       <div className="sobre-content">

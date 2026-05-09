@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { imagePath } from '../utils/assets.js'
 
 function Navbar() {
   // Este estado solo controla si la barra ya debe mostrar sombra.
@@ -20,7 +21,7 @@ function Navbar() {
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       {/* Logo y nombre de la marca. El enlace devuelve al inicio de la pagina. */}
       <a href="#hero" className="nav-logo">
-        <img src="/images/beegold-logo.jpeg" alt="BeeGold" />
+        <img src={imagePath('beegold-logo.jpeg')} alt="BeeGold" />
         <div>
           <span className="nav-logo-text">BEEGOLD</span>
           <span className="nav-logo-sub">train hard</span>
