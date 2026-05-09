@@ -1,29 +1,12 @@
-// ============================================================================
-//  COMPONENTE FAQ (Preguntas Frecuentes)
-// ============================================================================
-//  Acordeón: solo una pregunta puede estar abierta a la vez.
-//  Si haces clic en otra, se abre esa y se cierra la anterior.
-//  Si haces clic en la que ya está abierta, se cierra.
-//
-//  Concepto clave: ESTADO COMPARTIDO ENTRE HIJOS
-//  En vez de que cada FAQItem maneje su propio estado, el padre (FAQ) sabe
-//  cuál está abierta. Así garantizamos que solo haya una abierta a la vez.
-//  Esto se llama "lifting state up" (subir el estado al ancestro común).
-// ============================================================================
-
 import { useState } from 'react'
 import { faqs } from '../data/faqs.js'
 
 function FAQ() {
-  // Guarda el ID de la pregunta abierta. null = ninguna abierta.
+  // Guarda cual pregunta esta abierta. null significa que todas estan cerradas.
   const [openId, setOpenId] = useState(null)
 
-  /**
-   * Maneja el click en una pregunta:
-   * - Si la pregunta ya estaba abierta, la cerramos (null)
-   * - Si era otra, la marcamos como abierta
-   */
   const handleToggle = (id) => {
+    // Si le dan clic a la misma pregunta, se cierra. Si es otra, se abre esa.
     setOpenId(openId === id ? null : id)
   }
 
@@ -44,7 +27,6 @@ function FAQ() {
               key={faq.id}
               className={`faq-item ${isOpen ? 'open' : ''}`}
             >
-              {/* Botón clickable que pregunta. onClick llama a handleToggle */}
               <button
                 className="faq-q"
                 onClick={() => handleToggle(faq.id)}
@@ -54,8 +36,7 @@ function FAQ() {
                 <span className="faq-icon">+</span>
               </button>
 
-              {/* La respuesta. La animación de apertura/cierre se hace en CSS
-                  con max-height + transition. Ver global.css */}
+              {/* El CSS se encarga de animar esta respuesta cuando el item tiene la clase open. */}
               <div className="faq-a">{faq.answer}</div>
             </div>
           )

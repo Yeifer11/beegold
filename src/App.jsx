@@ -1,13 +1,5 @@
-// ============================================================================
-//  COMPONENTE APP - Composición de toda la página
-// ============================================================================
-//  Este es el componente "padre" que reúne todas las secciones de la landing.
-//  Cada sección está en su propio archivo en /components para mantener todo
-//  ordenado y reutilizable.
-//
-//  Si en el futuro quieres agregar/quitar secciones, solo edita este archivo.
-// ============================================================================
-
+// App arma la landing completa. Lo dejo como una lista de secciones para que
+// sea facil mover, quitar o agregar bloques sin tener que buscar por todo el proyecto.
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Catalog from './components/Catalog.jsx'
@@ -21,7 +13,7 @@ import WhatsAppFloat from './components/WhatsAppFloat.jsx'
 
 function App() {
   return (
-    // Fragment <>...</> permite devolver múltiples elementos sin un div extra
+    // El fragment evita meter un div extra solo para envolver la pagina.
     <>
       <Navbar />
       <Hero />

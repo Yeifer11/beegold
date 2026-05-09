@@ -1,10 +1,3 @@
-// ============================================================================
-//  COMPONENTE WHATSAPP FLOAT
-// ============================================================================
-//  Botón flotante verde de WhatsApp en la esquina inferior derecha.
-//  Siempre visible (CSS: position: fixed) para facilitar la conversión.
-// ============================================================================
-
 import { buildWhatsAppLink } from '../data/products.js'
 
 function WhatsAppFloat() {
@@ -13,6 +6,7 @@ function WhatsAppFloat() {
   )
 
   return (
+    // Boton siempre visible para que el usuario pueda escribir sin volver al contacto.
     <a
       href={waLink}
       target="_blank"

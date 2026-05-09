@@ -1,13 +1,7 @@
-/* ============================================================================
-   BEEGOLD - ESTILOS GLOBALES
-   ============================================================================
-   Paleta y reglas tomadas del diseño original generado con Claude.
-   Usamos CSS Variables (custom properties) para que todo el tema sea fácil
-   de modificar desde un solo lugar (:root).
-   ============================================================================ */
+/* ============================================================================`r`n   Estilos generales de BeeGold`r`n   ============================================================================`r`n   Aqui esta la base visual del sitio: colores, espaciados y estilos comunes.`r`n   Si algun dia se cambia la marca, casi todo empieza por estos valores.`r`n   ============================================================================ */
 
 :root {
-  /* Paleta de colores BeeGold (tonos cálidos y dorados) */
+  /* Paleta de colores BeeGold: crema, cafe y dorado como tonos principales. */
   --cream: #f5f0d4;
   --cream-dark: #ede5c0;
   --brown: #7a3520;
@@ -19,7 +13,7 @@
   --white: #fdfaf0;
 }
 
-/* Reset universal: elimina margenes/paddings por defecto del navegador */
+/* Reset corto para que todos los navegadores partan desde la misma base. */
 * {
   margin: 0;
   padding: 0;
@@ -27,18 +21,18 @@
 }
 
 html {
-  scroll-behavior: smooth; /* el scroll por anclas (#hero, #catalogo) anima suavemente */
+  scroll-behavior: smooth; /* Las anclas bajan suave entre secciones. */
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--cream);
   color: var(--text);
-  overflow-x: hidden; /* evita scroll horizontal accidental */
+  overflow-x: hidden; /* Evita una barra horizontal por desbordes pequeños. */
 }
 
 /* ============================================================================
-   NAV (barra superior fija)
+   NAV - barra superior fija
    ============================================================================ */
 
 nav {
@@ -57,7 +51,7 @@ nav {
   transition: box-shadow 0.3s;
 }
 
-/* Sombra sutil cuando el usuario hace scroll */
+/* Esta clase la activa Navbar.jsx cuando la pagina ya bajo un poco. */
 nav.scrolled {
   box-shadow: 0 2px 24px rgba(122, 53, 32, 0.1);
 }
@@ -127,7 +121,7 @@ nav.scrolled {
 }
 
 /* ============================================================================
-   HERO
+   HERO - primer pantallazo
    ============================================================================ */
 
 #hero {
@@ -420,7 +414,7 @@ nav.scrolled {
 }
 
 .btn-wa:hover {
-  background: #25d366; /* verde WhatsApp */
+  background: #25d366; /* Verde reconocible de WhatsApp. */
 }
 
 /* ============================================================================
@@ -565,7 +559,7 @@ nav.scrolled {
 }
 
 /* ============================================================================
-   FAQ
+   FAQ - acordeon de preguntas
    ============================================================================ */
 
 #faq {
@@ -641,7 +635,7 @@ nav.scrolled {
 }
 
 /* ============================================================================
-   INSTAGRAM
+   INSTAGRAM - galeria breve
    ============================================================================ */
 
 #instagram {
@@ -703,7 +697,7 @@ nav.scrolled {
 }
 
 /* ============================================================================
-   CONTACTO
+   CONTACTO - datos y llamada a WhatsApp
    ============================================================================ */
 
 #contacto {
@@ -847,7 +841,7 @@ nav.scrolled {
 }
 
 /* ============================================================================
-   FOOTER
+   FOOTER - cierre de pagina
    ============================================================================ */
 
 footer {

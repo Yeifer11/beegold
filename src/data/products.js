@@ -1,29 +1,17 @@
-// ============================================================================
-//  DATOS DE PRODUCTOS
-// ============================================================================
-//  Separamos los datos de los componentes (UI) para poder editar productos sin
-//  tocar el JSX. Esto se llama "separación de responsabilidades".
-//  Si en el futuro conectas un backend o un CMS, solo cambias este archivo.
-// ============================================================================
+// Datos del catalogo. La idea es que los productos se puedan cambiar desde aqui
+// sin tocar los componentes que pintan la interfaz.
 
-// Número de WhatsApp del negocio (sin '+', sin espacios)
+// Numero de WhatsApp del negocio, en formato internacional y sin el signo +.
 export const WHATSAPP_NUMBER = '573118525167'
 
-/**
- * Genera el link de WhatsApp con un mensaje pre-llenado.
- * @param {string} mensaje - Texto que se enviará al abrir WhatsApp
- * @returns {string} URL completa de WhatsApp
- */
+// Arma un enlace de WhatsApp con mensaje listo. encodeURIComponent evita que
+// espacios, tildes o simbolos rompan la URL.
 export const buildWhatsAppLink = (mensaje) => {
-  // encodeURIComponent convierte espacios y emojis en caracteres seguros para URL
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`
 }
 
-/**
- * Lista de productos del catálogo.
- * Cada producto tiene un id único (clave en React), nombre, descripción,
- * precio, imagen y los colores disponibles representados como puntos.
- */
+// Cada objeto representa una tarjeta del catalogo. Si se agrega otro producto,
+// Catalog.jsx lo muestra automaticamente porque recorre este arreglo.
 export const products = [
   {
     id: 'set-rosado',
@@ -87,13 +75,13 @@ export const products = [
       'Los tops con manga corta tienen un diseño de espalda descubierta exclusivo.',
     price: 130000,
     image: '/images/set-azul-trasero.jpg',
-    badge: null, // sin badge
+    badge: null,
     colorDots: [
       { hex: '#8ab8d8', label: 'Azul cielo' },
       { hex: '#1e3a6e', label: 'Azul marino' },
       { hex: '#7a4a30', label: 'Café' },
     ],
     waMessage: 'Hola! Quiero más info sobre los sets BeeGold 🐝',
-    ctaLabel: 'Consultar', // texto custom para el botón
+    ctaLabel: 'Consultar',
   },
 ]

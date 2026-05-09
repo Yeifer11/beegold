@@ -1,14 +1,3 @@
-// ============================================================================
-//  COMPONENTE CATALOG
-// ============================================================================
-//  Sección que muestra todos los productos en una grilla.
-//
-//  Concepto clave: RENDERIZAR LISTAS CON .map()
-//  Tomamos el array de productos (importado desde data/products.js) y por cada
-//  uno generamos un <ProductCard>. React necesita una "key" única en cada
-//  elemento (usamos product.id) para optimizar re-renders.
-// ============================================================================
-
 import ProductCard from './ProductCard.jsx'
 import { products } from '../data/products.js'
 
@@ -26,9 +15,7 @@ function Catalog() {
       </div>
 
       <div className="product-grid">
-        {/* Por cada producto del array, renderizamos una ProductCard.
-            La 'key' debe ser única (usamos el id) para que React identifique
-            cada elemento si la lista cambia. */}
+        {/* El catalogo sale completo desde products.js. Asi no repetimos tarjetas a mano. */}
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

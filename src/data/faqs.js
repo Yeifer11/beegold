@@ -1,10 +1,5 @@
-// ============================================================================
-//  PREGUNTAS FRECUENTES (FAQ)
-// ============================================================================
-//  Lista de preguntas y respuestas. Si quieres agregar más, solo añade un
-//  objeto al array — el componente FAQ las renderiza automáticamente.
-// ============================================================================
-
+// Preguntas frecuentes. FAQ.jsx recorre este arreglo, asi que agregar una duda
+// nueva es tan simple como sumar otro objeto con id, pregunta y respuesta.
 export const faqs = [
   {
     id: 'pedido',

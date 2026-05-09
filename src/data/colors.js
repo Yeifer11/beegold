@@ -1,12 +1,5 @@
-// ============================================================================
-//  PALETA DE COLORES DISPONIBLES
-// ============================================================================
-//  Lista de colores que se muestran en la sección "Colores Disponibles".
-//  Cada item tiene el color en hex y su nombre legible.
-//  El campo 'borderHex' es opcional: solo se usa cuando el color es muy claro
-//  y necesita un borde visible para no "perderse" en el fondo crema.
-// ============================================================================
-
+// Colores que se muestran en la seccion "Colores Disponibles".
+// borderHex es opcional y solo se usa cuando el tono necesita un borde mas visible.
 export const colors = [
   { hex: '#e879a0', label: 'Rosado' },
   { hex: '#8ab8d8', label: 'Azul Cielo' },

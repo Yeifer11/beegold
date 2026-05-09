@@ -1,11 +1,5 @@
-// ============================================================================
-//  COMPONENTE FOOTER
-// ============================================================================
-//  Pie de página con logo, copyright y enlaces.
-// ============================================================================
-
 function Footer() {
-  // Calculamos el año dinámicamente — así no tienes que editarlo cada año
+  // Asi el año se actualiza solo cuando cambie el calendario.
   const currentYear = new Date().getFullYear()
 
   return (

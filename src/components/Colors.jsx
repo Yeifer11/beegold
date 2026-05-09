@@ -1,10 +1,3 @@
-// ============================================================================
-//  COMPONENTE COLORS
-// ============================================================================
-//  Sección que muestra todos los colores disponibles como círculos (swatches).
-//  Igual que Catalog: mapeamos sobre el array de colores.
-// ============================================================================
-
 import { colors } from '../data/colors.js'
 import { buildWhatsAppLink } from '../data/products.js'
 
@@ -26,14 +19,13 @@ function Colors() {
       </div>
 
       <div className="colores-grid">
+        {/* La paleta tambien vive en datos, asi se puede ampliar sin tocar JSX. */}
         {colors.map((color) => (
           <div key={color.label} className="color-item">
             <div
               className="color-swatch"
               style={{
                 background: color.hex,
-                // Si el color trae un borderHex (caso 'Crema' que es muy claro),
-                // lo aplicamos. Si no, deja el borde por defecto del CSS.
                 borderColor: color.borderHex || undefined,
               }}
             />

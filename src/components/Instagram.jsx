@@ -1,13 +1,6 @@
-// ============================================================================
-//  COMPONENTE INSTAGRAM
-// ============================================================================
-//  Grid de 4 fotos que simulan el feed de Instagram.
-//  Cada foto tiene un overlay que aparece en hover (efecto en CSS).
-// ============================================================================
-
 const INSTAGRAM_URL = 'https://instagram.com/beegold'
 
-// Definimos las fotos como datos para que sea fácil cambiarlas en el futuro
+// Fotos que simulan una mini galeria de Instagram.
 const instaPhotos = [
   { src: '/images/set-rosado.jpg', alt: 'Instagram 1' },
   { src: '/images/set-azul-cielo.jpg', alt: 'Instagram 2' },
@@ -29,8 +22,7 @@ function Instagram() {
 
       <div className="insta-grid">
         {instaPhotos.map((photo, index) => (
-          // Aquí 'index' es aceptable como key porque la lista no cambia
-          // dinámicamente. Si fuera dinámica, sería mejor usar un id único.
+          // En esta galeria fija el index funciona bien como key.
           <div key={index} className="insta-item">
             <img src={photo.src} alt={photo.alt} />
             <div className="insta-overlay">

@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  // Plugin oficial para que Vite entienda React y JSX.
   plugins: [react()],
-  // IMPORTANTE: si vas a desplegar en GitHub Pages, cambia './' por '/nombre-del-repo/'
-  // Ejemplo: si tu repo se llama 'beegold', usa: base: '/beegold/'
-  // Si despliegas en Vercel, Netlify o un dominio propio, deja './' o '/'
+
+  // './' hace que las rutas funcionen bien en un hosting estatico.
+  // Para GitHub Pages tambien puede usarse '/beegold/' si se publica desde ese repo.
   base: './',
 })

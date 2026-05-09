@@ -1,40 +1,24 @@
-// ============================================================================
-//  COMPONENTE NAVBAR
-// ============================================================================
-//  Barra de navegación fija arriba con efecto: aparece una sombra cuando
-//  el usuario hace scroll (más de 40px hacia abajo).
-//
-//  Conceptos clave:
-//  - useState: guarda si la navbar tiene scroll o no (true/false)
-//  - useEffect: registra un listener de scroll cuando el componente "monta"
-//  - Cleanup function: removemos el listener cuando el componente desmonta
-//    (esto evita memory leaks)
-// ============================================================================
-
 import { useEffect, useState } from 'react'
 
 function Navbar() {
-  // useState(false) = el estado inicial es false (no hay scroll todavía)
+  // Este estado solo controla si la barra ya debe mostrar sombra.
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    // Función que se ejecuta cada vez que el usuario hace scroll
+    // Cuando el usuario baja un poco, cambiamos la clase del nav.
     const handleScroll = () => {
       setScrolled(window.scrollY > 40)
     }
 
-    // Suscribimos el listener al evento 'scroll' de la ventana
     window.addEventListener('scroll', handleScroll)
 
-    // RETURN del useEffect = cleanup. React lo llama cuando el componente
-    // desaparece (ej. al cambiar de página). Sin esto, dejaríamos listeners
-    // colgados en memoria.
+    // Se limpia el evento por buena practica, sobre todo si luego la app crece.
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []) // [] significa: ejecuta una sola vez al montar el componente
+  }, [])
 
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-      {/* Logo */}
+      {/* Logo y nombre de la marca. El enlace devuelve al inicio de la pagina. */}
       <a href="#hero" className="nav-logo">
         <img src="/images/beegold-logo.jpeg" alt="BeeGold" />
         <div>
@@ -43,7 +27,7 @@ function Navbar() {
         </div>
       </a>
 
-      {/* Menú de enlaces */}
+      {/* Navegacion interna por secciones y un acceso rapido a WhatsApp. */}
       <div className="nav-links">
         <a href="#catalogo">Catálogo</a>
         <a href="#colores">Colores</a>

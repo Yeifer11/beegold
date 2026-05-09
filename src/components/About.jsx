@@ -1,12 +1,5 @@
-// ============================================================================
-//  COMPONENTE ABOUT (Sobre Nosotras)
-// ============================================================================
-//  Sección con imagen a la izquierda y texto + estadísticas a la derecha.
-//  Es contenido estático, no necesita estado.
-// ============================================================================
-
 function About() {
-  // Definimos las stats como un array para que sea fácil agregar/quitar
+  // Estos numeros se pintan abajo del texto. Estan en arreglo para poder editarlos rapido.
   const stats = [
     { number: '5+', label: 'Colores' },
     { number: '100%', label: 'Calidad' },
